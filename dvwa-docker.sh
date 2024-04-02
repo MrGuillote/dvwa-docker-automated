@@ -62,13 +62,16 @@ else
 fi
 
 # Acceder a DVWA en el navegador
+echo ""
 echo -e "${COLOR_VERDE}Accede a DVWA en tu navegador: ${COLOR_RESET}"
 echo ""
 echo -e "${COLOR_MAGENTA}http://127.0.0.1:4200${COLOR_RESET}"
 echo ""
 echo -e "${COLOR_MAGENTA}Usuario: admin${COLOR_RESET}"
 echo -e "${COLOR_MAGENTA}Contraseña: password${COLOR_RESET}"
+echo ""
 echo -e "${COLOR_MAGENTA}Recuerda hacer clic en el botón 'Create / Reset Database'.${COLOR_RESET}"
+echo ""
 
 # Mostrar mensaje para detener el contenedor manualmente si es necesario
 echo -e "${COLOR_MAGENTA}Si necesitas detener el contenedor DVWA, ejecuta: sudo docker stop dvwa_container${COLOR_RESET}"

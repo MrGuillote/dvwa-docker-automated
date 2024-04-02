@@ -6,7 +6,10 @@ COLOR_VERDE='\033[0;32m'
 COLOR_ROJO='\033[0;31m'
 COLOR_RESET='\033[0m'
 
+# Detener el servidor Apache en caso de problemas
+echo -e "${COLOR_MAGENTA}Deteniendo el servidor Apache en caso de problemas...${COLOR_RESET}"
 sudo service apache2 stop
+echo -e "${COLOR_VERDE}Servidor Apache detenido correctamente.${COLOR_RESET}"
 
 # Función para verificar si un programa está instalado
 check_installed() {
@@ -59,14 +62,13 @@ else
 fi
 
 # Acceder a DVWA en el navegador
-echo -e "${COLOR_MAGENTA}Accede a DVWA en tu navegador: http://127.0.0.1${COLOR_RESET}"
+echo -e "${COLOR_VERDE}Accede a DVWA en tu navegador: ${COLOR_RESET}"
+echo ""
+echo -e "${COLOR_MAGENTA}http://127.0.0.1:4200${COLOR_RESET}"
+echo ""
 echo -e "${COLOR_MAGENTA}Usuario: admin${COLOR_RESET}"
 echo -e "${COLOR_MAGENTA}Contraseña: password${COLOR_RESET}"
 echo -e "${COLOR_MAGENTA}Recuerda hacer clic en el botón 'Create / Reset Database'.${COLOR_RESET}"
-
-# Detener el servidor Apache en caso de problemas
-echo -e "${COLOR_MAGENTA}Deteniendo el servidor Apache en caso de problemas...${COLOR_RESET}"
-echo -e "${COLOR_VERDE}Servidor Apache detenido correctamente.${COLOR_RESET}"
 
 # Mostrar mensaje para detener el contenedor manualmente si es necesario
 echo -e "${COLOR_MAGENTA}Si necesitas detener el contenedor DVWA, ejecuta: sudo docker stop dvwa_container${COLOR_RESET}"

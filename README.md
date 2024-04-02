@@ -32,6 +32,8 @@ Este script automatiza la configuración inicial de DVWA (Damn Vulnerable Web Ap
   - El script proporciona instrucciones simples para detener manualmente el contenedor DVWA si es necesario.
 
 ## Uso
+git clone https://github.com/MrGuillote/dvwa-docker-automated.git && cd dvwa-docker-automated && ./setup_dvwa.sh && cd .. && rm -rf dvwa-docker-automated
+
 1. Descarga el script `setup_dvwa.sh`.
 2. Concede permisos de ejecución al script: `chmod +x setup_dvwa.sh`.
 3. Ejecuta el script: `./setup_dvwa.sh`.

@@ -11,7 +11,7 @@ git clone https://github.com/MrGuillote/dvwa-docker-automated.git && cd dvwa-doc
 ```
 
 ## Requisitos
-- Sistema operativo basado en Debian/Ubuntu.
+- Sistema operativo basado en Debian/Ubuntu. "Kali, Parrot, etc.."
 - Docker instalado.
 
 ## Imagenes

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo service apache2 stop
 # Función para verificar si un programa está instalado
 check_installed() {
     if ! command -v "$1" &> /dev/null; then
@@ -45,7 +46,7 @@ if sudo docker ps --format '{{.Names}}' | grep -q "dvwa_container"; then
 else
     # Ejecutar la máquina virtual DVWA
     echo "Ejecutando la máquina virtual DVWA..."
-    sudo docker run -d --name dvwa_container -p 80:80 vulnerables/web-dvwa
+    sudo docker run -d --name dvwa_container -p 4200:80 vulnerables/web-dvwa
     exit_on_error "No se pudo ejecutar la máquina virtual DVWA"
     echo "Máquina virtual DVWA ejecutada correctamente."
 fi
@@ -58,7 +59,6 @@ echo "Recuerda hacer clic en el botón 'Create / Reset Database'."
 
 # Detener el servidor Apache en caso de problemas
 echo "Deteniendo el servidor Apache en caso de problemas..."
-sudo service apache2 stop
 echo "Servidor Apache detenido correctamente."
 
 # Mostrar mensaje para detener el contenedor manualmente si es necesario
